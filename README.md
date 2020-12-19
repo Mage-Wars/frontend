@@ -1,1 +1,1 @@
-#There will be docs for 'Mage Wars' game
+# There will be docs for 'Mage Wars' game
