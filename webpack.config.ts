@@ -2,7 +2,7 @@ import * as path from 'path';
 import { Configuration as WebpackConfiguration } from 'webpack';
 
 interface EnvVariables {
-  //TODO: fill this latter
+  //TODO: fill this later
   SOME_VAR?: string
 }
 
