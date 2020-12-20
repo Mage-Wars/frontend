@@ -1,0 +1,12 @@
+export type EquipmentSlot = 'helmet'
+| 'amulet'
+| 'cloak'
+| 'ring'
+| 'weapon'
+| 'shield'
+| 'weapon or shield'
+| 'weapon and shield'
+| 'chest piece'
+| 'belt'
+| 'gloves'
+| 'boots';

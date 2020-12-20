@@ -1,0 +1,11 @@
+export type CardSchool = 'dark'
+| 'holy'
+| 'nature'
+| 'fire'
+| 'mind'
+| 'arcane'
+| 'war'
+| 'earth'
+| 'water'
+| 'air'
+| 'fire';
