@@ -56,15 +56,17 @@ const webpackConfig: WebpackConfig = env => {
     ],
     devServer: {
       port: Number(env?.DEV_SERVER_PORT) || 3100,
+      historyApiFallback: true,
     },
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
       alias: {
         '@': path.resolve(__dirname, 'src'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
+        '@router': path.resolve(__dirname, 'src/router'),
         '@components': path.resolve(__dirname, 'src/components'),
         '@constants': path.resolve(__dirname, 'src/constants'),
         '@models': path.resolve(__dirname, 'src/models'),
-        '@pages': path.resolve(__dirname, 'src/pages'),
         '@services': path.resolve(__dirname, 'src/services'),
       },
     },

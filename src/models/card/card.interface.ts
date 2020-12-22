@@ -11,19 +11,21 @@ export interface Card {
   description: string;
   actionType: ActionType;
   manaCost: number;
+  //TODO: add this later
+  // manaReveal?: number;
   castRange: {
     min: number,
     max: number,
   };
   type: CardType;
   //TODO: fill subtypes later
-  subtype: string[];
+  subtype?: string[];
   //TODO: fill targets later
-  targetType: string;
+  targetType: string[];
   level: number;
   school: CardSchool;
   equipmentSlot?: EquipmentSlot;
-  attackBar?: CardArrackBar;
-  armor?: number | 'no armore';
   health?: number;
+  armor?: number | 'no armore';
+  attackBar?: CardArrackBar;
 };
