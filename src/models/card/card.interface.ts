@@ -1,14 +1,15 @@
-import { CardType } from '@models/card/card.type.interface';
-import { CardSchool } from '@models/card/card.school.interface';
-import { EquipmentSlot } from '@models/card/card.slot.interface';
+import { CardType } from '@constants/card/card.type.enum';
+import { CardSchool } from '@constants/card/card.school.enum';
+import { EquipmentSlot } from '@constants/card/card.slot.enum';
+import { ActionType } from '@/constants/action-type.enum';
+
 import { CardArrackBar } from '@models/card/card.attack-bar.interface';
-import { Trait } from '@/models/card/card.trait.interface'
 
 export interface Card {
   id: string;
   name: string;
   description: string;
-  actionType: 'quick' | 'full';
+  actionType: ActionType;
   manaCost: number;
   castRange: {
     min: number,
@@ -17,6 +18,7 @@ export interface Card {
   type: CardType;
   //TODO: fill subtypes later
   subtype: string[];
+  //TODO: fill targets later
   targetType: string;
   level: number;
   school: CardSchool;
@@ -24,5 +26,4 @@ export interface Card {
   attackBar?: CardArrackBar;
   armor?: number | 'no armore';
   health?: number;
-  trails?: Trait[];
 };

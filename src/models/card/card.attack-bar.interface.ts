@@ -1,28 +1,25 @@
 import { Effect } from '@models/effect.interface';
+import { ActionType } from '@constants/action-type.enum';
+import { AttackType } from '@/constants/attack/attack.type.enum';
+import { AttackModifire } from '@constants/attack/attack.modifire.enum';
 
 interface Attack {
   name?: string;
-  actionType?: 'quick'
-  | 'full';
-  attackType: 'melee'
-  | 'range';
+  actionType?: ActionType;
+  attackType: AttackType;
   attackRange?: {
     min: number;
     max: number;
   };
-  modifire?: 'fire'
-  | 'wind'
-  | 'holy'
-  | 'lightning';
+  modifire?: AttackModifire;
   diceDamage: number;
   additionalEffects?: {
     min: number;
     max: number;
     effects: Effect[];
   }[]
-  traits: string[];
-}
+};
 
 export interface CardArrackBar {
   attacks: Attack[];
-}
+};

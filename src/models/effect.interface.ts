@@ -1,12 +1,8 @@
-export type Effect = {
+import { EffectType } from '@/constants/effect-type.enum';
+
+export interface Effect {
   id: string;
-  name?: 'burn'
-  | 'cripple'
-  | 'daze'
-  | 'rot'
-  | 'sleep'
-  | 'stun'
-  | 'weak';
+  name?: EffectType;
   removalCost: number;
   description: string;
-}
+};
